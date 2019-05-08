@@ -18,9 +18,9 @@ LABEL "com.github.actions.icon"="rss"
 # And all of the available colors: https://developer.github.com/actions/creating-github-actions/creating-a-docker-container/#label
 LABEL "com.github.actions.color"="orange"
 
-LABEL "repository"="http://github.com/JasonEtco/create-an-issue"
-LABEL "homepage"="http://github.com/JasonEtco/create-an-issue"
-LABEL "maintainer"="Jason Etcovitch <jasonetco@github.com>"
+LABEL "repository"="https://github.com/ZjBlog/create-issue-by-lables"
+LABEL "homepage"="https://github.com/ZjBlog/create-issue-by-lables"
+LABEL "maintainer"="zjblog <zhangjun521ly@gamil.com>"
 
 # Copy the package.json and package-lock.json
 COPY package*.json ./
