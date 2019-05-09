@@ -14,7 +14,7 @@ FROM node:slim
 LABEL "com.github.actions.name"="createIssueByLables"
 LABEL "com.github.actions.description"="根据lables创建问题,如过和lables相关的问题不存在的话,问题在json文件中"
 # Here are all of the available icons: https://feathericons.com/
-LABEL "com.github.actions.icon"="rss"
+LABEL "com.github.actions.icon"="edit"
 # And all of the available colors: https://developer.github.com/actions/creating-github-actions/creating-a-docker-container/#label
 LABEL "com.github.actions.color"="orange"
 
