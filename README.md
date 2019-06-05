@@ -20,3 +20,17 @@
 }
 ```
 使用时需要 GITHUB_TOKEN secrets,可以自定义json路径,在使用时加入 args = ".github/other.json"
+# 用法
+```
+workflow "New workflow" {
+  on = "push"
+  resolves = ["createIssue"]
+}
+
+action "createIssue" {
+  uses = "ZjBlog/create-issue-by-lables@master"
+  secrets = ["GITHUB_TOKEN"]
+  args = "issues.json"
+}
+
+```
