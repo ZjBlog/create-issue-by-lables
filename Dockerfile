@@ -8,8 +8,7 @@
 #
 # You can specify a version:
 # FROM node:10-slim
-FROM node:slim
-
+FROM node:10-alpine
 # Labels for GitHub to read your action
 LABEL "com.github.actions.name"="createIssueByLables"
 LABEL "com.github.actions.description"="根据lables创建问题,如过和lables相关的问题不存在的话,问题在json文件中"
