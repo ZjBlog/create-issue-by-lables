@@ -1,11 +1,9 @@
-const core = require('@actions/core')
 const { Toolkit } = require('actions-toolkit')
 const moment = require('moment-timezone')
 // Run your GitHub Action!
 Toolkit.run(async tools => {
 
-    const path = core.getInput('filePath') || '.github/issues.md'
-    tools.log.debug('Reading from file', path)
+    const path = tools.arguments._[0] || 'issues.json'
     const contents = tools.getFile(path)
     const obj = JSON.parse(contents)
     let timezone = obj['timezone'] || 'Asia/Shanghai'
@@ -76,5 +74,6 @@ Toolkit.run(async tools => {
     }
     tools.log.success('创建完成')
 }, {
+    event: ['push'],
     secrets: ['GITHUB_TOKEN']
 })
